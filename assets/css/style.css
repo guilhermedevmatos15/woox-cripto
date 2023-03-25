@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root {
-   --color-01: #ed1b1b;
-   --color-02: #2369e3;
-   --color-03: #063d1e;
-   --color-04: #3fb873;
-   --color-05: #171d19;
+   --color-01: #F28705;
+   --color-02: #F29F05;
+   --color-03: #F2B705;
+   --color-04: #1F2126;
+   --color-05: #17181D;
 
    --font-padrao: 'Inter', Arial, sans-serif;
    --font-secundaria: Arial, sans-serif;
@@ -21,4 +21,9 @@ body {
    width: 100%;
    height: auto;
    font-family: var(--font-padrao);
+}
+
+/* ! TEMP */
+img {
+   width: 100px;
 }
