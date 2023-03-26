@@ -2,6 +2,21 @@ import initAOS from './library/aos.js';
 import initSmoothScroll from './library/smoothScroll.js';
 import initTypedTexts from './library/typed.js';
 initAOS(1800); // 1000 === 1 segundo
-initSmoothScroll(0, 2000);
-// ! Se não utilizar a library typed, deixe comentada para não gerar erros. Se quiser usar apenas descomente a linha abaixo e configure da maneira que quiser
-// initTypedTexts(['one', 'two', 'tree'], 300, 300, 400);
+initSmoothScroll(150, 2000);
+
+function returnInitialPage() {
+   const buttons = Array.from(
+      document.querySelectorAll('[data-retornar-topo="true"]')
+   );
+
+   buttons.forEach((element, index, arr) => {
+      element.addEventListener('click', () => {
+         window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+         });
+      });
+   });
+}
+returnInitialPage();

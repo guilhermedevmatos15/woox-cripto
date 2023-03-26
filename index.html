@@ -16,7 +16,7 @@
    <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
    <!-- Icons -->
       <!-- Font Awessome -->
@@ -37,57 +37,57 @@
 
 </head>
 <body>
-   <header>
+   <header data-aos="fade-down">
       <img src="assets/img/woox-low-resolution-logo-color-on-transparent-background.png" alt="logo woox">
       <nav>
          <ul>
-            <li><a href="#primeira-section">Começar</a></li>
-            <li><a href="#segunda-section">Começar</a></li>
-            <li><a href="#terceira-section">Começar</a></li>
-            <li><a href="#quarta-section">Começar</a></li>
+            <li><a href="#primeira-section">Moedas</a></li>
+            <li><a href="#segunda-section">Acompanhe</a></li>
+            <li><a href="#terceira-section">Dados</a></li>
+            <li><a href="#quarta-section">Contato</a></li>
          </ul>
       </nav>
       <button class="comecar">Começar</button>
    </header>
 
-   <section>
-      <div class="imagem">
+   <main>
+      <div class="imagem" data-aos="fade-up" data-aos-delay="300">
          <img src="assets/img/undraw_investing_re_bov7.svg" alt="investimentos em criptomoedas">
       </div>
-      <div class="conteudo">
+      <div class="conteudo" data-aos="fade-down" data-aos-delay="700">
          <h1>Investimentos em<br><strong>Criptomoedas</strong></h1>
          <p>Soluções <span lang="en">Blockchain</span></p>
          <button class="detalhes">Detalhes</button>
       </div>
-   </section>
+   </main>
 
-   <section class="moedas">
-      <div class="cards">
-         <div class="card">
+   <section class="moedas" id="primeira-section">
+      <div class="cards" data-aos="fade">
+         <div class="card" data-aos="zoom-in" data-aos-delay="1200">
             <img src="assets/img/criptomoedas/cardano-icon.png" alt="cardano icon">
             <h3>Cardano</h3>
             <p class="preco">R$1,89</p>
             <p class="alta">+1,5%</p>
          </div>
-         <div class="card">
+         <div class="card" data-aos="zoom-in" data-aos-delay="700">
             <img src="assets/img/criptomoedas/ethereum-icon.png" alt="ethereum icon">
             <h3>Ethereum</h3>
             <p class="preco">R$9.155,04</p>
             <p class="alta">+5,2%</p>
          </div>
-         <div class="card">
+         <div class="card" data-aos="zoom-in" data-aos-delay="200">
             <img src="assets/img/criptomoedas/bitcoin-icon.png" alt="bitcoin icon">
             <h3>Bitcoin</h3>
             <p class="preco">R$143.552,11</p>
             <p class="alta">+1,01%</p>
          </div>
-         <div class="card">
+         <div class="card" data-aos="zoom-in" data-aos-delay="700">
             <img src="assets/img/criptomoedas/dogecoin-icon.png" alt="dogecoin icon">
             <h3>Dogecoin</h3>
             <p class="preco">R$0,39</p>
             <p class="queda">-0,8%</p>
          </div>
-         <div class="card">
+         <div class="card" data-aos="zoom-in" data-aos-delay="1200">
             <img src="assets/img/criptomoedas/theter-icon.png" alt="tether icon">
             <h3>Tether</h3>
             <p class="preco">R$5,25</p>
@@ -96,9 +96,9 @@
       </div>
    </section>
 
-   <section class="acompanhe">
+   <section class="acompanhe" id="segunda-section">
       <div class="conteudo">
-         <h2>Acompanhe estatisticas de criptomoedas<br> em qualquer dispositivo.</h2>
+         <h2>Acompanhe estatisticas de criptomoedas em <strong>qualquer dispositivo.</strong></h2>
          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab necessitatibus, laboriosam maxime esse sint dolores at nihil corrupti quaerat, odit eos reiciendis! Quis labore, tempora eaque magni quos distinctio amet.</p>
          <button class="comecar">Começar</button>
       </div>
@@ -107,27 +107,9 @@
       </div>
    </section>
 
-   <section class="vida-digital">
-      <hr>
-      <h2>Vida no Mundo Digital</h2>
-      <div class="cards">
-         <div class="card">
-            <h3 class="estatistica">90%</h3>
-            <p class="descricao">Casas com internet<br>no Brasil</p>
-         </div>
-         <div class="card">
-            <h3 class="estatistica">5,4bi</h3>
-            <p class="descricao">Pessoas conectadas a internet<br>no Mundo</p>
-         </div>
-         <div class="card">
-            <h3 class="estatistica">+6000</h3>
-            <p class="descricao">Transições</p>
-         </div>
-      </div>
-   </section>
-
-   <section class="analise">
-      <div class="image">
+   
+   <section class="analise" id="terceira-section">
+      <div class="imagem">
          <img src="assets/img/undraw_programming_re_kg9v.svg" alt="pessoa investindo">
       </div>
       <div class="conteudo">
@@ -136,7 +118,9 @@
       </div>
    </section>
    
-   <section class="contato">
+   <hr>
+
+   <section class="contato" id="quarta-section">
       <div class="conteudo">
          <h2>Entre em contato!</h2>
          <form action="#">
@@ -148,7 +132,7 @@
                <label for="mensagem">Mensagem</label>
                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
             </div>
-            <button class="enviar">Enviar</button>
+            <button class="enviar" type="button">Enviar</button>
          </form>
       </div>
    </section>
@@ -161,7 +145,9 @@
 
 
    <!-- Modal's -->
-
+   <div class="inicio-pagina" data-retornar-topo="true" title="Retornar ao topo da página">
+      <i class="fa-sharp fa-solid fa-arrow-up"></i>
+   </div>
 
    <!-- Javascript/scripts -->
    <script src="assets/js/main.js" type="module"></script>
