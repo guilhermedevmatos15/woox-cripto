@@ -9,6 +9,9 @@
 
    --font-padrao: 'Raleway', sans-serif;
    --font-secundaria: 'Inconsolata', monospace;
+   --font-terciaria: 'Anonymous Pro', monospace;
+
+   font-size: 16px;
 }
 
 * {
@@ -128,7 +131,7 @@ main, section {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 50px;
+   /* gap: 50px; */
 }
 .imagem {
    position: relative;
@@ -169,7 +172,7 @@ main h1 {
 main h1 strong {
    font-weight: 700;
    color: var(--color-02);
-   font-family: var(--font-secundaria);
+   font-family: var(--font-terciaria);
 }
 main p {
    /* color: var(--color-03); */
@@ -177,6 +180,9 @@ main p {
    font-size: 1.3rem;
    font-weight: 500;
    font-family: var(--font-secundaria);
+}
+main .conteudo {
+   padding-right: 20px;
 }
 .conteudo button {
    margin-top: 5px;
@@ -191,7 +197,7 @@ main p {
    gap: 0;
 }
 .moedas .cards {
-   width: 80%; max-width: 1000px;
+   width: 80%; min-width: 860px; max-width: 1000px;
    height: auto;
    padding: 30px;
    border-radius: 30px;
@@ -240,6 +246,7 @@ main p {
    align-items: center;
 }
 .acompanhe .conteudo {
+   padding-left: 30px;
    justify-content: center;
    align-items: flex-end;
    text-align: right;
@@ -279,12 +286,14 @@ hr {
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 0;
 }
 .analise .imagem img {
    width: 300px;
 }
 .analise .conteudo {
    width: 50%;
+   padding-right: 20px;
    justify-content: center;
    align-items: flex-start;
 }
@@ -302,7 +311,7 @@ hr {
 
 /* seção de contato */
 .contato {
-   margin: 50px auto 0 auto;
+   margin: 150px auto 0 auto;
    width: 100%;
    height: auto;
    padding: 30px;
@@ -313,7 +322,7 @@ hr {
    gap: 0px;
 }
 .contato .conteudo {
-   width: 100%; max-width: 500px;
+   width: 100%; min-width: 290px; max-width: 500px;
    height: auto;
    padding: 30px;
    border-radius: 30px;
@@ -403,4 +412,94 @@ footer .year {
    cursor: pointer;
    transition: all .4s;
    background-color: var(--color-02);
+}
+
+
+
+
+
+/* ? responsive header
+obs: Apenas modificações no header aqui! */
+@media (max-width: 900px) {
+   header {
+      padding: 10px 30px;
+   }
+
+}
+
+
+/* ? media quries */
+@media (min-width: 1910px) {
+   :root {
+      font-size: 18px;
+   }
+}
+@media (max-width: 1005px) {
+   main .imagem img {
+      width: 300px;
+   }
+   main h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+   }
+}
+@media (max-width: 900px) {
+   .moedas .cards {
+      min-width: auto;
+      flex-wrap: wrap;
+   }
+}
+@media (max-width: 790px) {
+   main .imagem img {
+      width: 230px;
+   }
+   .acompanhe .imagem img {
+      width: 220px;
+   }
+   .analise .imagem img {
+      width: 200px;
+   }
+}
+@media (max-width: 680px) {
+   .imagem {
+      display: none;
+   }
+   .conteudo {
+      width: 100%;
+      padding: 0 30px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .acompanhe .conteudo, .analise .conteudo{
+      width: 100%;
+      padding: 0 50px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+   .acompanhe .conteudo p, .acompanhe .conteudo h2, .analise .conteudo h2, .analise .conteudo p {
+      max-width: none;
+   }
+   
+   .inicio-pagina {
+      bottom: 30px;
+      right: 30px;
+   }
+}
+@media (max-width: 400px) {
+   hr {
+      width: 70%;
+   }
+   .acompanhe .conteudo, .analise .conteudo{
+      padding: 0 30px;
+   }
+}
+@media (max-width: 350px) {
+   main h1 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      margin-bottom: 10px;
+   }
 }
