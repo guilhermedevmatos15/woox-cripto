@@ -131,6 +131,7 @@ main, section {
    gap: 50px;
 }
 .imagem {
+   position: relative;
    width: 50%;
    height: 100%;
    /* padding-right: 100px; */
@@ -376,6 +377,9 @@ footer img {
 footer a {
    color: var(--color-03);
    text-decoration: none;
+}
+footer .year {
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 

@@ -20,3 +20,10 @@ function returnInitialPage() {
    });
 }
 returnInitialPage();
+
+function atualizarFooter() {
+   const span = document.querySelector('span.year');
+   const date = new Date();
+   span.innerHTML = date.getFullYear();
+}
+atualizarFooter();
