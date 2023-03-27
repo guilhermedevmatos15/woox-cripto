@@ -48,5 +48,13 @@ function responsiveHeader() {
          divMenu.classList.remove('ativo');
       });
    });
+
+   // se ouver rezise no site, o menu é desabilitado
+   window.addEventListener('resize', () => {
+      if (window.innerWidth >= 840) {
+         divMenu.classList.remove('ativo');
+         // barsIcon.style.display = 'none';
+      }
+   });
 }
 responsiveHeader();
