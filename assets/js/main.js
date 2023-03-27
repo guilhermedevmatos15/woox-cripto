@@ -27,3 +27,26 @@ function atualizarFooter() {
    span.innerHTML = date.getFullYear();
 }
 atualizarFooter();
+
+function responsiveHeader() {
+   const divMenu = document.querySelector('body > .menu');
+   const links = [...divMenu.querySelectorAll('nav ul li, nav ul li a')];
+   const barsIcon = document.querySelector('i.fa-bars');
+   const xMarkIcon = document.querySelector('i.fa-xmark');
+
+   // interação de abrir e fechar
+   barsIcon.addEventListener('click', () => {
+      divMenu.classList.toggle('ativo');
+   });
+   xMarkIcon.addEventListener('click', () => {
+      divMenu.classList.toggle('ativo');
+   });
+
+   // se ouver click nos links, fecha menu e scroll até o lugar
+   links.forEach((element) => {
+      element.addEventListener('click', () => {
+         divMenu.classList.remove('ativo');
+      });
+   });
+}
+responsiveHeader();

@@ -28,6 +28,10 @@ body {
    background-color: var(--color-05);
 }
 
+header i.fa-bars {
+   display: none;
+}
+
 /* Buttons */
 button {
    font-size: 1.1rem;
@@ -121,7 +125,7 @@ header nav ul li:hover, header nav ul li a:hover {
 }
 
 
-
+/* pré-definição para algumas seções */
 main, section {
    margin: 130px auto 0 auto;
    /* margin: auto; */
@@ -271,7 +275,6 @@ main .conteudo {
 }
 
 
-/* linha */
 hr {
    width: 300px;
    margin: 120px auto 0 auto;
@@ -417,14 +420,82 @@ footer .year {
 
 
 
+.menu {
+   display: none;
+}
+.menu.ativo {
+   position: fixed;
+   top: 0;
+   z-index: 20;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+   background-color: #171717ef;
+   color: white;
+   overflow-y: scroll;
+   transition: all .4s;
+}
+.menu.ativo i.fa-xmark {
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   font-size: 2rem;
+   cursor: pointer;
+   transition: all .4s;
+}
+.menu.ativo i.fa-xmark:hover {
+   cursor: pointer;
+   transition: all .4s;
+   color: var(--color-01);
+}
+.menu.ativo nav ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+.menu.ativo nav ul li, .menu.ativo nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.2rem;
+   cursor: pointer;
+   transition: all .4s;
+}
+.menu.ativo nav ul li:hover, .menu.ativo nav ul li a:hover {
+   cursor: pointer;
+   transition: all .4s;
+   color: var(--color-02);
+}
+.menu.ativo button {
+   margin-top: 40px;
+}
 
 /* ? responsive header
 obs: Apenas modificações no header aqui! */
-@media (max-width: 900px) {
+@media (max-width: 840px) {
    header {
-      padding: 10px 30px;
+      padding: 10px 50px;
    }
-
+   header nav, header button {
+      display: none;
+   }
+   header i.fa-bars {
+      display: inline;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: all .4s;
+   }
+   header i.fa-bars:hover {
+      cursor: pointer;
+      transition: all .4s;
+      color: var(--color-03);
+   }
 }
 
 
